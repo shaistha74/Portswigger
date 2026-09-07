@@ -52,13 +52,13 @@ As I work through more categories on the Academy (SSRF, SQL injection, access co
 
 | Lab | Bypass Technique | Writeup |
 |---|---|---|
-| Traversal sequences stripped non-recursively | Nested sequence (`....//`) collapses back into `../` after a single-pass strip | [README](./pathtraversal/file-path-traversal-non-recursive-stripping/README.md) |
-| Traversal sequences blocked with absolute path bypass | Supplying an absolute path (`/etc/passwd`) skips the traversal filter entirely — no `../` needed | [README](./path-traversal/file-path-traversal-absolute-path-bypass/README.md) |
-| Traversal sequences stripped with superfluous URL-decode | Double URL-encoding (`%252e%252e%252f`) survives the filter, then decodes into `../` on the app's own extra decode pass | [README](./path-traversal/file-path-traversal-superfluous-url-decode/README.md) |
-| Validation of start of path | Prefix stays valid (`/var/www/images/`) while `../` after it walks back out to root | [README](./path-traversal/file-path-traversal-start-of-path-validation/README.md) |
-| Validation of file extension with null byte bypass | Embedded null byte (`%00`) truncates the path before the filesystem, so a fake `.jpg` suffix satisfies the extension check without ever being read | [README](./path-traversal/file-path-traversal-null-byte-bypass/README.md) |
+| Traversal sequences stripped non-recursively | Nested sequence (`....//`) collapses back into `../` after a single-pass strip | [README](Path_Traversal_labs/Lab_file-path-traversal-non-recursive-stripping/file-path-traversal-non-recursive-stripping.md) |
+| Traversal sequences blocked with absolute path bypass | Supplying an absolute path (`/etc/passwd`) skips the traversal filter entirely — no `../` needed | [README](Path_Traversal_labs/Lab_file-path-traversal-absolute-path-bypass/file-path-traversal-absolute-path-bypass.md) |
+| Traversal sequences stripped with superfluous URL-decode | Double URL-encoding (`%252e%252e%252f`) survives the filter, then decodes into `../` on the app's own extra decode pass | [README](Path_Traversal_labs/Lab_file-path-traversal-superfluous-url-decode/file-path-traversal-superfluous-url-decode.md) |
+| Validation of start of path | Prefix stays valid (`/var/www/images/`) while `../` after it walks back out to root | [README](Path_Traversal_labs/Lab_file-path-traversal-start-of-path-validation/file-path-traversal-start-of-path-validation.md) |
+| Validation of file extension with null byte bypass | Embedded null byte (`%00`) truncates the path before the filesystem, so a fake `.jpg` suffix satisfies the extension check without ever being read | [README](Path_Traversal_labs/Lab_file-path-traversal-null-byte-bypass/file-path-traversal-null-byte-bypass.md) |
 
-📓 See [`path-traversal-notes.md`](./path-traversal/path-traversal-notes.md) for a condensed reference — bypass cheat-sheet, testing checklist, and pentest finding template.
+📓 See [`path-traversal-notes.md`](Path_Traversal_labs/path-traversal-notes.md) for a condensed reference — bypass cheat-sheet, testing checklist, and pentest finding template.
 
 ## Methodology (applies across all labs)
 
