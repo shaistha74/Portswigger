@@ -23,21 +23,21 @@ Writeups are grouped by vulnerability category. Each lab has its own folder cont
 ```
 portswigger/
 ├── README.md                                              ← you are here
-└── path-traversal/
+└── path_traversal_labs/
     ├── path-traversal-notes.md                            ← condensed study notes / bypass cheat-sheet
-    ├── file-path-traversal-non-recursive-stripping/
+    ├── Lab_file-path-traversal-non-recursive-stripping/
     │   ├── README.md
     │   └── screenshots/
-    ├── file-path-traversal-absolute-path-bypass/
+    ├── Lab_file-path-traversal-absolute-path-bypass/
     │   ├── README.md
     │   └── screenshots/
-    ├── file-path-traversal-superfluous-url-decode/
+    ├── Lab_file-path-traversal-superfluous-url-decode/
     │   ├── README.md
     │   └── screenshots/
-    ├── file-path-traversal-start-of-path-validation/
+    ├── Lab_file-path-traversal-start-of-path-validation/
     │   ├── README.md
     │   └── screenshots/
-    └── file-path-traversal-null-byte-bypass/
+    └── Lab_file-path-traversal-null-byte-bypass/
         ├── README.md
         └── screenshots/
 ```
@@ -52,7 +52,7 @@ As I work through more categories on the Academy (SSRF, SQL injection, access co
 
 | Lab | Bypass Technique | Writeup |
 |---|---|---|
-| Traversal sequences stripped non-recursively | Nested sequence (`....//`) collapses back into `../` after a single-pass strip | [README](./path-traversal/file-path-traversal-non-recursive-stripping/README.md) |
+| Traversal sequences stripped non-recursively | Nested sequence (`....//`) collapses back into `../` after a single-pass strip | [README](./pathtraversal/file-path-traversal-non-recursive-stripping/README.md) |
 | Traversal sequences blocked with absolute path bypass | Supplying an absolute path (`/etc/passwd`) skips the traversal filter entirely — no `../` needed | [README](./path-traversal/file-path-traversal-absolute-path-bypass/README.md) |
 | Traversal sequences stripped with superfluous URL-decode | Double URL-encoding (`%252e%252e%252f`) survives the filter, then decodes into `../` on the app's own extra decode pass | [README](./path-traversal/file-path-traversal-superfluous-url-decode/README.md) |
 | Validation of start of path | Prefix stays valid (`/var/www/images/`) while `../` after it walks back out to root | [README](./path-traversal/file-path-traversal-start-of-path-validation/README.md) |
